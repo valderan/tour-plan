@@ -1,4 +1,4 @@
-var mySwiper = new Swiper('.swiper-container', {
+const mySwiper = new Swiper('.swiper-container', {
   // Зацикленность
   loop: true,
 
@@ -15,10 +15,11 @@ var mySwiper = new Swiper('.swiper-container', {
     pageUpDown: true
   },
 
-  // Управление колесом мыши
-  mousewheel: {
-    sensitivity: 1, 
-    eventsTarget: ".slider"
-  },
+  // // Управление колесом мыши
+  // mousewheel: {
+  //   sensitivity: 1, 
+  //   eventsTarget: ".slider"
+  // },
 
 })
+
