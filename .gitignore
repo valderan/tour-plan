@@ -2,3 +2,6 @@ env.sh
 /node_modules/
 package-lock.json
 /backup/
+package.json
+gulpfile.js
+
