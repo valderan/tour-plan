@@ -13,12 +13,10 @@ var mySwiper = new Swiper('.swiper-container', {
     enable: true,
     onlyInViewport: true,
     pageUpDown: true
-  } // // Управление колесом мыши
-  // mousewheel: {
-  //   sensitivity: 1, 
-  //   eventsTarget: ".slider"
-  // },
-
+  }
+});
+$('.newsletter').parallax({
+  imageSrc: 'img/newsletter-bg.jpeg'
 });
 ymaps.ready(init);
 
