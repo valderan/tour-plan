@@ -1311,6 +1311,7 @@ template {
 .subscribe__button {
   position: absolute;
   min-width: 65px;
+  max-width: 65px;
   right: 0;
   top: 0;
   height: 100%;
@@ -1323,6 +1324,8 @@ template {
   line-height: 15px;
   color: #ffffff;
   cursor: pointer;
+  -o-text-overflow: clip;
+     text-overflow: clip;
 }
 
 @media (max-width: 1200px) {
@@ -1343,7 +1346,8 @@ template {
 }
 
 @media (max-width: 992px) {
-  .container {
+  .container,
+  .newsletter-wrapper {
     max-width: 760px;
   }
 
@@ -1502,6 +1506,11 @@ template {
   .map {
     width: 100%;
   }
+
+  .newsletter-wrapper {
+    display: block;
+    width: 92%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1515,5 +1524,28 @@ template {
 
   .hotel__slider {
     margin-bottom: 20px;
+  }
+
+  .newsletter-wrapper {
+    margin: 76px 0 83px 20px;
+  }
+
+  .newsletter-title {
+    margin-top: 76;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .newsletter-title__strong {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 37px;
+  }
+
+  .subscribe {
+    width: 100%;
   }
 }

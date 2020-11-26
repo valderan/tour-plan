@@ -173,7 +173,7 @@ function public() {
 function html() {
   return src(path.src.html)
   .pipe(fileinclude())              // подключение шаблонизатора
-  // .pipe(webpHTML())                 // замена обычных изображений на webp при наличии !! Можно отключить
+  .pipe(webpHTML())                 // замена обычных изображений на webp при наличии !! Можно отключить
   .pipe(dest(path.build.html))      // копирование файлов в каталог сборки
   .pipe(browsersync.stream())       // вывод в браузер
 }
@@ -225,13 +225,13 @@ function js () {
 // Работа с изображениями
 function images() {
   return src(path.src.img)  
-    // .pipe(  
-    //   webp({                         // подключаем конвертер изображений в webp
-    //     quality: 70
-    //   })
-    // )
-    // .pipe(dest(path.build.img))
-    // .pipe(src(path.src.img))         // переключаемся обратно в папку изображениями сборки 
+    .pipe(  
+      webp({                         // подключаем конвертер изображений в webp
+        quality: 70
+      })
+    )
+    .pipe(dest(path.build.img))
+    .pipe(src(path.src.img))         // переключаемся обратно в папку изображениями сборки 
     .pipe(imagemin({                 // подключаем оптимизацию изображений
         progressive: true,
         svgoPlugins: [{ removeViewBox: false }],
