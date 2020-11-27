@@ -17,6 +17,25 @@ const hotelSlider = new Swiper('.hotel-slider', {
   
 })
 
+const rewiewSlider = new Swiper('.reviews-slider', {
+  // Зацикленность
+  loop: true,
+
+  // Навигация лево - право
+  navigation: {
+    nextEl: '.reviews-slider__button--next',
+    prevEl: '.reviews-slider__button--prev',
+  },
+
+  // Управление клавиатурой
+  keyboard: {
+    enable: true,
+    onlyInViewport: true,
+    pageUpDown: true
+  },
+  
+})
+
 ymaps.ready(init);
 function init(){
     // Создание карты.
@@ -29,4 +48,4 @@ function init(){
 }
 
 // Parallax-effect for newsletter block
-// $('.newsletter').parallax({imageSrc: 'img/newsletter-bg.jpeg'});
+$('.newsletter').parallax({imageSrc: 'img/newsletter-bg.jpeg'});
