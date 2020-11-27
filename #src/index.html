@@ -114,25 +114,30 @@
       </div>
       <!-- /.hotel-info -->
       <div class="hotel-grid">
-        <div class="slider hotel__slider">
-          <!-- Slider main container -->
-          <div class="swiper-container">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide"><img class="swiper-slide__image" src="./img/slide-1.jpg" alt=""></div>
-              <div class="swiper-slide"><img class="swiper-slide__image" src="./img/slide-2.jpg" alt=""></div>
-              <div class="swiper-slide"><img class="swiper-slide__image" src="./img/slide-3.jpg" alt=""></div>
-              <div class="swiper-slide"><img class="swiper-slide__image" src="./img/slide-4.jpg" alt=""></div>
-              <div class="swiper-slide"><img class="swiper-slide__image" src="./img/slide-5.jpg" alt=""></div>
-            </div>
-            <!-- If we need navigation buttons -->
-            <button class="slider-button slider-button--prev"></button>
-            <button class="slider-button slider-button--next"></button>
+
+        <!-- Slider main container -->
+        <div class="swiper-container hotel-slider hotel-slider">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide hotel-slider__item"><img class="swiper-slide__image" src="./img/slide-1.jpg"
+                alt=""></div>
+            <div class="swiper-slide hotel-slider__item"><img class="swiper-slide__image" src="./img/slide-2.jpg"
+                alt=""></div>
+            <div class="swiper-slide hotel-slider__item"><img class="swiper-slide__image" src="./img/slide-3.jpg"
+                alt=""></div>
+            <div class="swiper-slide hotel-slider__item"><img class="swiper-slide__image" src="./img/slide-4.jpg"
+                alt=""></div>
+            <div class="swiper-slide hotel-slider__item"><img class="swiper-slide__image" src="./img/slide-5.jpg"
+                alt=""></div>
           </div>
-          <!-- /swiper-container -->
+          <!-- If we need navigation buttons -->
+          <button class="hotel-slider__button hotel-slider__button--prev"></button>
+          <button class="hotel-slider__button hotel-slider__button--next"></button>
         </div>
-        <!-- /.slider -->
+        <!-- /swiper-container -->
+
+
         <div class="hotel-right">
           <div class="booking">
             <div class="booking__info">
@@ -191,9 +196,52 @@
     <!-- /.newsletter-wrapper -->
   </section>
   <!-- /.newsletter -->
+  <section class="rewiews">
+    <div class="container">
+      <h2 class="section-title">
+        What people think about us
+      </h2>
+      <div class="swiper-container rewiews-slider">
+        <!-- Additional required wrapper -->
+
+        <div class="swiper-wrapper ">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="rewiews-slider__item">
+              <div class="rewiews-slider__profile">
+                <img src="img/reviews-avatar.jpeg" alt="Megan Fox" class="rewiews-slider__avatar">
+                <h3 class="rewiews-slider__username">Megan Fox</h3>
+                <span class="rewiews-slide__date">Stayed 18 Nov, 2019</span>
+                <div class="raiting">
+                  <img src="img/star.svg" alt="star">
+                  <img src="img/star.svg" alt="star">
+                  <img src="img/star.svg" alt="star">
+                  <img src="img/star.svg" alt="star">
+                  <img src="img/star.svg" alt="star">
+                </div>
+                <!-- /.raiting -->
+              </div>
+              <!-- /.rewiews-slider__profile -->
+            </div>
+            <!-- /.rewiews-slider__item -->
+          </div>
+          <!-- /.swiper-slide -->
+        </div>
+        <!-- /.swiper-wrapper -->
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+      </div>
+      <!-- /.rewiews-slider -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.rewiews -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="public/parallax.min.js"></script>
   <script src="public/swiper-bundle.min.js"></script>
+  <script src="public/parallax.min.js"></script>
   <script src="src/main.min.js"></script>
 </body>
 
