@@ -1168,7 +1168,7 @@ template {
 }
 
 .parallax-mirror {
-  max-height: 100%;
+  min-height: 300px;
 }
 
 .newsletter {
@@ -1480,7 +1480,6 @@ template {
   top: 0;
   bottom: 0;
   width: 100%;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   z-index: -2;
@@ -1592,6 +1591,9 @@ template {
 }
 
 @media (max-width: 768px) {
+  .parallax-mirror {
+    min-height: 355px;
+  }
   .container {
     max-width: 700px;
     width: 92%;
@@ -1652,9 +1654,6 @@ template {
         -ms-flex-order: -1;
             order: -1;
     margin-left: 0;
-  }
-  .slider {
-    height: 350px;
   }
   .swiper-container {
     max-width: 100%;
@@ -1719,11 +1718,16 @@ template {
 }
 
 @media (max-width: 576px) {
+  .parallax-mirror {
+    min-height: 516px;
+  }
   .logo {
     width: 99px;
   }
-  .hotel__slider {
+  .hotel-slider {
     margin-bottom: 20px;
+    width: 100%;
+    max-height: 213px;
   }
   .newsletter-wrapper {
     margin: 76px 0 83px 20px;
@@ -1755,6 +1759,12 @@ template {
   }
   .card {
     width: 100%;
+  }
+}
+
+@media (max-width: 576px) and (max-width: 320px) {
+  .hotel-slider {
+    max-height: 179px;
   }
 }
 

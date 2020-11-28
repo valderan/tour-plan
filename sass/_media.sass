@@ -75,6 +75,9 @@
     width: 340px
 
 @media (max-width: 768px)
+  .parallax-mirror
+    min-height: 355px
+
   .container
     max-width: 700px
     width: 92%
@@ -123,9 +126,6 @@
       &__offer
         order: -1
         margin-left: 0
-
-  .slider
-    height: 350px
 
   .swiper
     &-container
@@ -186,12 +186,17 @@
     height: 255px
 
 @media ( max-width: 576px )
+  .parallax-mirror
+    min-height: 516px
+
   .logo
     width: 99px
 
   .hotel
-    &__slider
+    &-slider
       margin-bottom: 20px
+      width: 100%
+      max-height: 213px
 
   .newsletter
     &-wrapper
@@ -226,3 +231,8 @@
 
   .card
     width: 100%
+
+  @media ( max-width: 320px )
+    .hotel
+      &-slider
+        max-height: 179px
