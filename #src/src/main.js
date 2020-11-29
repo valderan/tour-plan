@@ -1,3 +1,7 @@
+// import Swiper bundle with all modules installed
+import Swiper from 'swiper/bundle';
+
+
 const hotelSlider = new Swiper('.hotel-slider', {
   // Зацикленность
   loop: true,

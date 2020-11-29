@@ -1,20 +1,12 @@
-@mixin font($font_name, $file_name, $weight, $style)
-  @font-face
-    font-family: $font_name
-    font-display: swap
-    src: url('../fonts/#{$file_name}.woff') format('woff'), url('../fonts/#{$file_name}.woff2') format('woff2')
-    font-weight: #{$weight}
-    font-style: #{style}
-
 // Подключение переменных
 @import '_variables'
 // Подключение базовых настроек
 @import 'settings'
 // Подключаем normalize
-@import 'normalize'
+// @import 'normalize'
 // Подключаем шрифты
 @import 'fonts'
-стили для блока header
+//стили для блока header
 @import 'blocks/header'
 // Хлебные крошки
 @import 'blocks/breadcrumb'
@@ -32,4 +24,4 @@
 @import 'media'
 
 .parallax-mirror
-  max-height: 300px !important
+  max-height: 300px
