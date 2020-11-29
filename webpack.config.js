@@ -66,7 +66,7 @@ const sassLoader = () => {
   return loaders
 }
 
-// Настройка: оптимизация для лоадеров JS - TS - JSX
+// Настройка: оптимизация для babel-лоадеров JS - TS - JSX
 const babelOptions = preset => {
   const opts = {
     presets: [
