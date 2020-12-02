@@ -8,6 +8,3 @@ import '@public/parallax.min'
 
 // Загрузка основоного файла скриптов
 import './src/main.js'
-
-
-
