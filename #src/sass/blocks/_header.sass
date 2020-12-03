@@ -10,10 +10,15 @@
 
     &__menu-button
       display: none
+      border: none
+      outline: none
 
   &__search
     margin-right: auto
     margin-left: 108px
+    &--mobile
+      &--visible
+        display: none !important
 
   &-bottom
     background-color: $dark
@@ -70,6 +75,10 @@
   align-items: center
   text-decoration: none
 
+  &--mobile
+    &--visible
+      display: none !important
+
   &__avatar
     width: 40px
     height: 40px
@@ -81,3 +90,10 @@
     line-height: 18px
     color: $text-color
     margin-left: 18px
+
+.menu
+  &-button
+    &__line
+      &--size
+        margin-top: 4px
+        margin-bottom: 4px

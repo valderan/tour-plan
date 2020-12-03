@@ -1,7 +1,6 @@
 // import Swiper bundle with all modules installed
 import Swiper from 'swiper/bundle';
 
-
 const hotelSlider = new Swiper('.hotel-slider', {
   // Зацикленность
   loop: true,
@@ -40,6 +39,7 @@ const rewiewSlider = new Swiper('.reviews-slider', {
   
 })
 
+// Yandex map
 ymaps.ready(init);
 function init(){
   // Создание карты.
@@ -62,3 +62,8 @@ function init(){
 
 // Parallax-effect for newsletter block
 $('.newsletter').parallax({imageSrc: 'img/newsletter-bg.jpeg'});
+
+// Mobile menu toggle button
+document.querySelector('.menu-button').addEventListener('click', e => {
+  document.querySelector('.navbar-bottom').classList.toggle('navbar-bottom--visible')
+})
