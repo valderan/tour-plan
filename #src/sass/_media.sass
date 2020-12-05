@@ -172,6 +172,7 @@
       bottom: 0
       padding-top: 30px
       &--visible
+        overflow-y: auto
         animation: scale-in-tr 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
         display: block
 
@@ -303,6 +304,12 @@
   .parallax-mirror
     min-height: 516px
 
+  .navbar
+
+    &__search
+      &--mobile
+        max-width: 80%
+
   .logo
     width: 99px
 
@@ -329,6 +336,9 @@
         line-height: 38px
         margin-bottom: 37px
 
+    &__subscribe
+      max-width: 90%
+
   .subscribe
     width: 100%
 
@@ -351,6 +361,7 @@
     flex-basis: 100%
 
   .footer
+
     &-wrapper
       grid-row-gap: 30px
       grid-template-columns: 1fr
@@ -380,12 +391,14 @@
 
     &__contact
       &-details
+        max-width: 94%
         margin: 0
         grid-row: 6
         grid-column: 1
 
     &__contact
       &-form
+        max-width: 94%
         margin: 0
         grid-row: 7
         grid-column: 1
@@ -395,6 +408,7 @@
       grid-row: 8
       grid-column: 1
       grid-template-columns: 1fr
+      max-width: 94%
 
       &__links
         grid-column: 1
@@ -410,9 +424,24 @@
         justify-self: left
 
 @media ( max-width: 320px )
+
+  .navbar
+
+    &-menu
+      margin: 0
+
+    &__search
+      &--mobile
+        max-width: 245px
+
   .hotel
     &-slider
       max-height: 179px
+
+  .newsletter
+    &__subscribe
+      max-width: 281px
+
   .footer
 
     &__contact
@@ -423,6 +452,9 @@
         margin: 0
         justify-self: center
         max-width: 281px
+
+    &-bottom
+      max-width: 281px
 
   .button
     &-wrapper
