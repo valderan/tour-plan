@@ -202,9 +202,9 @@
         subscribe to our
         <span class="newsletter-title__strong">newsletter</span>
       </h2>
-      <form action="#" class="subscribe newsletter__subscribe">
-        <input type="text" class="subscribe__input" placeholder="Your email address">
-        <button class="subscribe__button">Send</button>
+      <form id="newsletter__subscribe" action="#" class="subscribe newsletter__subscribe">
+        <input name="email" type="text" class="subscribe__input" placeholder="Your email address">
+        <button type="submit" class="subscribe__button">Send</button>
       </form>
     </div>
     <!-- /.newsletter-wrapper -->
@@ -440,10 +440,10 @@
         <!-- /.footer__contact-details -->
         <div class="footer__contact-form">
           <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
-          <form action="#" class="footer__footer-form">
-            <input type="text" class="input footer__input" placeholder="Your Full Name*">
-            <input type="text" class="input footer__input" placeholder="Phone Number*">
-            <textarea cols="30" rows="6" class="footer__message" placeholder="Message"></textarea>
+          <form id="footer__contact-form" action="#" class="footer__footer-form">
+            <input type="text" name="name" class="input footer__input" placeholder="Your Full Name*">
+            <input type="text" name="phone" class="input footer__input" placeholder="Phone Number*">
+            <textarea name="message" cols="30" rows="6" class="footer__message" placeholder="Message"></textarea>
             <div class="button-wrapper">
               <button class="button footer__button" type="submit">Send</button>
               <span class="footer__info">* Required Fields</span>

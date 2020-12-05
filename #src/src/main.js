@@ -65,5 +65,5 @@ $('.newsletter').parallax({imageSrc: 'img/newsletter-bg.jpeg'});
 
 // Mobile menu toggle button
 document.querySelector('.menu-button').addEventListener('click', e => {
-  document.querySelector('.navbar-bottom').classList.toggle('navbar-bottom--visible')
+  document.querySelector('.navbar-bottom').classList.toggle('navbar-bottom--visible') 
 })

@@ -6,5 +6,7 @@ import './sass/style.sass'
 // Импорт библиотеки parallax 
 import '@public/parallax.min'
 
-// Загрузка основоного файла скриптов
+// Загрузка основоных файлов скриптов
 import './src/main.js'
+
+import './src/sendForm.js'

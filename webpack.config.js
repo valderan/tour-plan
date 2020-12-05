@@ -19,7 +19,7 @@ const isProd = !isDev
 // все основные настройки собраны в этой части
 
 // Порт запуска dev-server 
-const PORT = 3000
+const PORT = 9000
 // Директория с исходными файлами
 const WORK_DIR = path.resolve(__dirname,'#src')
 // Директория сборки проекта
@@ -31,7 +31,7 @@ const SPLIT_CHUNKS = false
 // так же можно (hot:false, liveReload:true, watchContentBase:true)
 const HOT_MODULE_REPLACEMENT = false
 // Открытие в новом окне браузера при запуске
-const START_IN_NEW_WINDOW = false
+const START_IN_NEW_WINDOW = true
 
 // Структура проекта
 const ps = {
