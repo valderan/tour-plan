@@ -7,6 +7,6 @@ import './sass/style.sass'
 import '@public/parallax.min'
 
 // Загрузка основоных файлов скриптов
-import './src/main.js'
-
-import './src/sendForm.js'
+import '@src/modal'
+import '@src/main'
+import '@src/sendData'

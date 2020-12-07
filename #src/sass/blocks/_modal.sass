@@ -1,0 +1,73 @@
+// работа с модальным окном
+.modal
+  &__overlay
+    z-index: 100
+    position: fixed
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    background-color: rgba(0, 143, 223, 0.39)
+    visibility: hidden
+    opacity: 0
+    transition: opacity 0.2s
+
+  &__dialog
+    z-index: 101
+    position: fixed
+    top: 50%
+    left: 50%
+    width: 478px
+    transform: translate(-50%, -50%)
+    padding: 33px 88px
+    background-color: $dark
+    border-radius: 8px
+    color: $light
+    visibility: hidden
+    opacity: 0
+    transition: opacity 0.2s
+    overflow-y: auto
+
+  &--active
+    visibility: visible
+    opacity: 1
+
+  &__close
+    position: absolute
+    right: 18px
+    top: 17px
+    cursor: pointer
+    text-decoration: none
+
+  &__title
+    font-style: normal
+    font-weight: bold
+    font-size: 18px
+    line-height: 23px
+    text-transform: uppercase
+    color: $light
+    text-align: center
+    margin-top: 0
+    margin-bottom: 15px
+
+  &__input
+    width: 100%
+    margin-bottom: 15px
+
+  &__message
+    width: 100%
+    min-height: 123px
+    margin-bottom: 15px
+
+  &__button-wrapper
+    display: flex
+    width: 100%
+    justify-content: space-between
+    align-items: center
+
+  &__info
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 15pх
+    color: #E0E0E0
