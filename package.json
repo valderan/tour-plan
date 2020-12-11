@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
+    "aos": "^2.3.4",
     "jquery": "^3.5.1",
     "jquery-mask-plugin": "^1.14.16",
     "jquery-validation": "^1.19.2",

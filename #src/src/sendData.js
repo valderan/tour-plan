@@ -1,10 +1,5 @@
 import sendForm from '@src/models/sendForm'
 
-const phoneValidation = (input) => {
-  const re = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/
-  return re.test(input)
-}
-
 const nameValidation = (name) => {
   return /^.+\s.+\s?.*$/i.test(name)
 }
@@ -16,9 +11,8 @@ const validateEmail = (email) =>  {
 }
 
 const contactValidation = (body) => {
-  if (!phoneValidation(body.phone)) console.error('Некорректный номер телефона!');
   if (!nameValidation(body.name)) console.error('Некорректное заполнение поля:"NAME"');
-  return (phoneValidation(body.phone) && nameValidation(body.name)) ? true : false 
+  return nameValidation(body.name) ? true : false 
 } 
 
 const contactForm = {
