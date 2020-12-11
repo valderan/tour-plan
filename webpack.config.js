@@ -26,7 +26,7 @@ const WORK_DIR = path.resolve(__dirname,'#src')
 // Директория сборки проекта
 const BUILD_DIR = path.resolve(__dirname,'dist')
 // Оптимизация - разбиение на чанки
-const SPLIT_CHUNKS = false
+const SPLIT_CHUNKS = true
 // Включение webpack's HotModuleReplacement (Обновление при изменении файлов)
 // при проблемах обновления контента установить HOT_MODULE_REPLACEMENT = false
 // так же можно (hot:false, liveReload:true, watchContentBase:true)

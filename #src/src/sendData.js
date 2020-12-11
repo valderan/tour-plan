@@ -1,7 +1,8 @@
 import sendForm from '@src/models/sendForm'
 
 const nameValidation = (name) => {
-  return /^.+\s.+\s?.*$/i.test(name)
+  // return /^[a-zA-Zа-яёА-ЯЁ]+$/u.test(name)
+  return true
 }
 
 const validateEmail = (email) =>  {
