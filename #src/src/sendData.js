@@ -16,13 +16,6 @@ const contactValidation = (body) => {
   return nameValidation(body.name) ? true : false 
 } 
 
-const contactForm = {
-  formName: 'footer__contact-form',
-  url: 'https://agrosumka.ru/sendMail/contact',
-  token: '1a520b11-e67c-4f79-b3b3-8e1a91102cd2',
-  dataValidation : contactValidation
-}
-
 const newsletterValid = (email) => {
   const result = validateEmail(email)
   const error = document.querySelector('.error');
@@ -33,12 +26,30 @@ const newsletterValid = (email) => {
   return result
 }
 
+const contactForm = {
+  formName: 'footer__contact-form',
+  url: 'https://agrosumka.ru/sendMail/contact',
+  token: '1a520b11-e67c-4f79-b3b3-8e1a91102cd2',
+  dataValidation : contactValidation, 
+  isOK: () => document.location.href = 'https://y-evo.ru/homeworks/hotels-booking/thanks.html'
+}
+
 const newsletterForm = {
   formName: 'newsletter__subscribe',
   url: 'https://agrosumka.ru/sendMail/newsletter',
   token: '1a520b11-e67c-4f79-b3b3-8e1a91102cd2',
-  dataValidation : (body) => newsletterValid(body.email)
+  dataValidation : (body) => newsletterValid(body.email),
+  isOK: () => document.location.href = 'https://y-evo.ru/homeworks/hotels-booking/thanks.html'
+}
+
+const modalForm = {
+  formName: 'modal__contact-form',
+  url: 'https://agrosumka.ru/sendMail/contact',
+  token: '1a520b11-e67c-4f79-b3b3-8e1a91102cd2',
+  dataValidation : (body) => {return true},
+  isOK: () => document.location.href = 'https://y-evo.ru/homeworks/hotels-booking/thanks.html'
 }
 
 sendForm(contactForm)
 sendForm(newsletterForm)
+sendForm(modalForm)

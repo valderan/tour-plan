@@ -1,6 +1,6 @@
 import GetURL from './GetUrl'
 
-const sendForm = ({ formName, url, token, dataValidation}) => {
+const sendForm = ({ formName, url, token, dataValidation, isOK}) => {
   const form = document.getElementById(formName),
     btnSend = [...form.elements].filter(item => {
         return item.tagName.toLowerCase() === 'button' && item.type === 'submit';
@@ -46,6 +46,7 @@ const sendForm = ({ formName, url, token, dataValidation}) => {
       })
       .then((data) => {
         console.log(data.message);
+        isOK()
       })
       .catch((err) => {
           btnSend.innerText = btnText;
