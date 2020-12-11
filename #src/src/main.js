@@ -1,4 +1,4 @@
-// import Swiper bundle with all modules installed
+// импорт Swiper
 import Swiper from 'swiper/bundle';
 
 const hotelSlider = new Swiper('.hotel-slider', {
@@ -39,7 +39,7 @@ const rewiewSlider = new Swiper('.reviews-slider', {
   
 })
 
-// Yandex map
+// Яндекс - карта
 ymaps.ready(init);
 function init(){
   // Создание карты.
@@ -60,10 +60,10 @@ function init(){
   } 
 }
 
-// Parallax-effect for newsletter block
+// Паралакс-эфект для блока newsletter
 $('.newsletter').parallax({imageSrc: 'img/newsletter-bg.jpeg'});
 
-// Mobile menu toggle button
+// Мобильное меню
 document.querySelector('.menu-button').addEventListener('click', e => {
   document.querySelector('.navbar-bottom').classList.toggle('navbar-bottom--visible') 
 })

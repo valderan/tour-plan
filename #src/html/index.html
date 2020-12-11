@@ -10,7 +10,6 @@
     rel="stylesheet">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <script src="https://api-maps.yandex.ru/2.1/?apikey=6fa6a24d-ddc7-4b0b-8b18-494ff7dcf257&lang=ru_RU"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <title>Best Tour PLan - Hotel Booking</title>
 </head>
 
@@ -202,10 +201,15 @@
         subscribe to our
         <span class="newsletter-title__strong">newsletter</span>
       </h2>
-      <form id="newsletter__subscribe" action="#" class="subscribe newsletter__subscribe">
-        <input name="email" type="text" class="subscribe__input" placeholder="Your email address">
-        <button type="submit" class="subscribe__button">Send</button>
-      </form>
+      <div class="form-wrapper">
+        <form id="newsletter__subscribe" action="#" class="subscribe newsletter__subscribe">
+          <input name="email" type="email" class="subscribe__input email" placeholder="Your email address" required>
+          <button type="submit" class="subscribe__button">Send</button>
+        </form>
+        <div class="error">
+          Please input correct EMAIL
+        </div>
+      </div>
     </div>
     <!-- /.newsletter-wrapper -->
   </section>
@@ -440,9 +444,13 @@
         <!-- /.footer__contact-details -->
         <div class="footer__contact-form">
           <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
-          <form id="footer__contact-form" action="#" class="footer__footer-form">
-            <input type="text" name="name" class="input footer__input" placeholder="Your Full Name*">
-            <input type="text" name="phone" class="input footer__input" placeholder="Phone Number*">
+          <form id="footer__contact-form" action="#" class="footer__footer-form form">
+            <div class="footer__input-group">
+              <input type="text" name="name" class="input footer__input" placeholder="Your Full Name*" required>
+            </div>
+            <div class="footer__input-group">
+              <input type="tel" name="phone" class="input footer__input phone" placeholder="Phone Number*" required>
+            </div>
             <textarea name="message" cols="30" rows="6" class="message footer__message"
               placeholder="Message"></textarea>
             <div class="button-wrapper">
@@ -479,9 +487,10 @@
       </a>
       <div class="modal__contact-form ">
         <h3 class="modal__title modal__title--mb-3">Send us a message</h3>
-        <form id="modal__contact-form" action="#" class="modal__modal-form">
+        <form id="modal__contact-form" action="#" class="modal__modal-form form">
           <input type="text" name="name" class="input modal__input" placeholder="Your Full Name*">
-          <input type="text" name="phone" class="input modal__input" placeholder="Phone Number*">
+          <input type="tel" name="phone" class="input modal__input phone" placeholder="Phone Number*" required>
+          <input type="email" name="email" class="input modal__input" placeholder="Your Email*" required>
           <textarea name="message" cols="30" rows="6" class="message modal__message" placeholder="Message"></textarea>
           <div class="modal__button-wrapper">
             <button class="button modal__button" type="submit">Send</button>

@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 // Плагин для работы с HTML
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 // Плагин для очистки директории
@@ -190,6 +191,10 @@ module.exports = {
     hot: HOT_MODULE_REPLACEMENT,
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    }),
     new HTMLWebpackPlugin({
       template: ps.src.html.path + ps.htmlIndexFile,
       minify: {

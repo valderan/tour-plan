@@ -33,10 +33,13 @@ export default class ShowModal {
 
   init(modal = this.data) {
     
-    modal.openButton.addEventListener('click', e => {
-      e.preventDefault()
-      this.show()
-    })
+    modal.openButton.forEach(button => {
+      button.addEventListener('click', e => {
+        e.preventDefault()
+        this.show()
+      })        
+    });
+
 
     if (modal.overlayClickCloseModal) {
       modal.overlay.addEventListener('click', e => {

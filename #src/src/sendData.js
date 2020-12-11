@@ -21,20 +21,6 @@ const contactValidation = (body) => {
   return (phoneValidation(body.phone) && nameValidation(body.name)) ? true : false 
 } 
 
-// const contactFormDev = {
-//   formName: 'footer__contact-form',
-//   url: 'http://127.0.0.1:3000/sendMail/contact',
-//   token: '1a520b11-e67c-4f79-b3b3-8e1a91102cd2',
-//   dataValidation : contactValidation
-// }
-
-// const newsletterFormDev = {
-//   formName: 'newsletter__subscribe',
-//   url: 'http://127.0.0.1:3000/sendMail/newsletter',
-//   token: '1a520b11-e67c-4f79-b3b3-8e1a91102cd2',
-//   dataValidation : (body) => validateEmail(body.email)
-// }
-
 const contactForm = {
   formName: 'footer__contact-form',
   url: 'https://agrosumka.ru/sendMail/contact',
@@ -42,11 +28,21 @@ const contactForm = {
   dataValidation : contactValidation
 }
 
+const newsletterValid = (email) => {
+  const result = validateEmail(email)
+  const error = document.querySelector('.error');
+  if (!result) 
+    error.classList.add('error--visible')
+  else
+    error.classList.remove('error--visible')
+  return result
+}
+
 const newsletterForm = {
   formName: 'newsletter__subscribe',
   url: 'https://agrosumka.ru/sendMail/newsletter',
   token: '1a520b11-e67c-4f79-b3b3-8e1a91102cd2',
-  dataValidation : (body) => validateEmail(body.email)
+  dataValidation : (body) => newsletterValid(body.email)
 }
 
 sendForm(contactForm)

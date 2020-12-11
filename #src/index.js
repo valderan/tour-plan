@@ -8,5 +8,6 @@ import '@public/parallax.min'
 
 // Загрузка основоных файлов скриптов
 import '@src/modal'
+import '@src/validation'
 import '@src/main'
 import '@src/sendData'

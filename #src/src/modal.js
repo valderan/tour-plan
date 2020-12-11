@@ -1,9 +1,14 @@
+
+
 import ShowModal from '@src/models/ShowModal.js'
 
 window.addEventListener('DOMContentLoaded', e => {
 
   const otherOptionsModal = {
-    openButton: document.querySelector('.booking__button'),
+    openButton: [
+      document.querySelector('.booking__button'),
+      ...document.querySelectorAll('.card__button'),
+    ],
     closeButton: document.querySelector('.modal__close'),
     overlay: document.querySelector('.modal__overlay'),
     overlayClickCloseModal: true, 
@@ -14,5 +19,4 @@ window.addEventListener('DOMContentLoaded', e => {
 
   const contactFormModal = new ShowModal(otherOptionsModal)
   contactFormModal.init() 
-
 })
